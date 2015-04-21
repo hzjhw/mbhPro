@@ -1,0 +1,23 @@
+<div class="app-content login_dealers">
+    <div class="top app-section app-topbar">
+        <div class="wrap">
+            <div class="app-back btn-back app-btn">返回</div>
+            <div class="title" data-back>经销商需求</div>
+        </div>
+    </div>
+    <div class="wrap registered">
+        <div class="cate-item-sub-title">
+            请选择以下您的门种需求 <span class="icon-bg icon-down"></span>
+        </div>
+        <ul class="cate-pro-ul search-pro-ul">
+            {{#each allLoves}}
+            <li data-id="{{para_value}}" {{#each ../myLoves}} {{#compare ../para_value '==' this}}class='red'{{/compare}} {{/each}} >{{para_key}}</li>
+            {{/each}}
+        </ul>
+        <button id="chglove" type="submit">修改需求</button>
+    </div>
+    <div class="wrap note">
+        <!-- <p><a href="#">我的收藏夹</a><a href="#">修改密码</a></p>-->
+        <p>3·30门业招商节运营中心—上门网</p>
+    </div>
+</div>

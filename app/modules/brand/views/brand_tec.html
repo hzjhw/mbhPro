@@ -1,0 +1,102 @@
+<div id="factory">
+    <div class="app-logo-container app-topbar" style="height: 86px;">
+        <div class="header">
+            <a class="fl app-back go-back app-btn" href="javascript:void(0)">返回</a>
+            <img class="fl logo" src="images/logo.jpg" alt="330门业招商节">
+
+            <div class="fr hall">展馆</div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class="app-content">
+        <div id="include_header">
+            <div class="loading-text">拼命加载中...<a href="javascript:App.load('brand_tec');">刷新页面</a></div>
+        </div>
+        <div class="company x">
+            <div class="name">企业名称：{{factInfo.cust_name}}</div>
+            <div class="certificate">
+                <div class="zs">工商认证：</div>
+                <div class="zs"><img height="42" src="{{CONST 'PIC_URL'}}/{{picUrl factInfo.reg_no_path 3}}"></div>
+                {{#if factInfo.reg_no}}
+                <div class="zs z"><img height="42" src="{{CONST 'PIC_URL'}}/{{picUrl factInfo.reg_no 3}}"></div>
+                {{/if}}
+            </div>
+            <div class="data">
+                <ul>
+                    <li>注册资金：{{factInfo.reg_money}}</li>
+                    <li class="number">员工人数：{{factInfo.staff_num}}</li>
+                    <li class="area">厂房面积：{{factInfo.isoem}}</li>
+                    <li class="production">年产量：{{factInfo.year_sum}}万樘</li>
+                    <li class="product"><p class="l">主营产品：</p>
+
+                        <P class="r">{{factInfo.temp_code}}</P></li>
+                </ul>
+            </div>
+            <div class="prompt">此品牌已加入3·30经销商合作保障计划</div>
+        </div>
+        <div class="introduce x">
+            <div class="title_general"><p>公司简介</p>
+                <p class="open"></p></div>
+            <div class="detailed_general">
+                {{{factInfo.cust_desc}}}
+            </div>
+            <span class="lan">[查看更多请点展开]</span>
+        </div>
+        <div class="power x">
+            <div class="honor">
+                <div class="title_power">
+                    <div class="bt">公司荣誉</div>
+                    <i></i>
+                </div>
+                <div class="detailed">
+                    <ul>
+                        {{#each honors}}
+                        <li class="fl">
+                            <div class="img"><img src="{{CONST 'PIC_URL'}}/{{img_path}}"></div>
+                            <div class="txt">{{title}}</div>
+                        </li>
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div class="honor">
+                <div class="title_power">
+                    <div class="bt">厂区展示</div>
+                    <i></i>
+                </div>
+                <div class="detailed">
+                    <ul>
+                        {{#each areas}}
+                        <li class="fl">
+                            <div class="img"><img src="{{CONST 'PIC_URL'}}/{{content}}"></div>
+                            <div class="txt">{{title}}</div>
+                        </li>
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+
+
+        <div class="message">
+            <div class="loading-text">拼命加载中...<a href="javascript:App.load('brand_tec');">刷新页面</a></div>
+        </div>
+        <!--页脚-->
+        <div class="app-section merchant-footer">
+            <p>①2015 浙B2-20050229-3 用户反馈中心</p>
+            <img src="images/bottom-logo.png" alt="手机 3月30日">
+
+            <div><strong>足不出户逛展会</strong></div>
+        </div>
+
+    </div>
+    <div class="app-bottombar">
+        <div class="bottombar-cover"></div>
+        <div class="bottombar">
+            <ul class="bottombar-ul">
+            </ul>
+        </div>
+    </div>
+</div>

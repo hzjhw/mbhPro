@@ -1,0 +1,93 @@
+<div class="app-section">
+    <div class="category-title">
+        <div class="cate-item category-zg current app-btn">
+            展馆分类
+        </div>
+        <!--<div class="cate-item app-btn category-pro">
+            产品分类
+        </div>-->
+        <div class="app-button app-back category-close icon-bg app-btn"></div>
+    </div>
+</div>
+<div class="app-content">
+    <div class="app-section relative">
+        <div class="cate-item-sub cate-item-sub-0 cate-cur">
+            <div class="cate-item-sub-title">
+                请选择以下展馆分类进入查看品牌或产品 <span class="icon-bg icon-down"></span>
+            </div>
+            <ul class="cate-ul">
+                <li class="cate_01 cate-l app-btn" data-id="4361326338 " data-title="品牌展示馆" data-banner="banner">
+                    <div class="cate-title  app-button">
+                        品牌展示馆
+                        <!--<p>海量品牌等你来选</p>-->
+                    </div>
+                </li>
+                <li class="cate_02 cate-r app-btn" data-id="" data-title="特色门馆" data-banner="banner">
+                    <div class="cate-title app-button">
+                        特色门馆
+                        <!--<p>各厂家最待色的门</p>-->
+                    </div>
+                </li>
+                <li class="cate_03 cate-l app-btn" data-id="1417272248" data-title="防盗门馆" data-banner="fangdaomen_banner">
+                    <div class="cate-title app-button">
+                        防盗门馆
+                        <!--<p>工艺上具备原木的天然待性与环保性</p>-->
+                    </div>
+                </li>
+                <li class="cate_04 cate-r app-btn" data-id="4432837154" data-title="防火门馆" data-banner="fanghuomen_banner">
+                    <div class="cate-title app-button">
+                        防火门馆
+                        <!--<p>工艺上具备原木的天然待性与环保性</p>-->
+                    </div>
+                </li>
+                <li class="cate_05 cate-l app-btn" data-id="3818678422" data-title="非标门馆" data-banner="feibiaomen_banner">
+                    <div class="cate-title app-button">
+                        非标门馆
+                        <!--<p>工艺上具备原木的天然待性与环保性</p>-->
+                    </div>
+                </li>
+                <li class="cate_06 cate-r app-btn" data-id="8636812455" data-title="铜门/不锈钢门馆" data-banner="buxiugangmen_banner">
+                    <div class="cate-title app-button">
+                        铜门<br />不锈钢门馆
+                        <!--<p>工艺上具备原木的天然待性与环保性</p>-->
+                    </div>
+                </li>
+                <li class="cate_07 cate-l app-btn" data-id="4531876237" data-title="木门馆" data-banner="mumen_banner">
+                    <div class="cate-title app-button">
+                        木门馆
+                        <!--<p>工艺上具备原木的天然待性与环保性</p>-->
+                    </div>
+                </li>
+                <li class="cate_08 cate-r app-btn" data-id="5276256741" data-title="生态木门/强化门" data-banner="shengtaimen_banner">
+                    <div class="cate-title app-button">
+                        生态木门<br />强化门
+                        <!--<p>拥有更长的使用寿命</p>-->
+                    </div>
+                </li>
+                <li class="cate_09 cate-l app-btn" data-id="4412667554" data-title="钢木门馆" data-banner="gangmumen_banner">
+                    <div class="cate-title app-button">
+                        钢木门馆
+                        <!--<p>无毒绿色健康环保</p>-->
+                    </div>
+                </li>
+                <li class="cate_10 cate-r app-btn" data-id="3486245445" data-title="铝合金门馆" data-banner="lvhejinmen_banner">
+                    <div class="cate-title app-button">
+                        铝合金门馆
+                        <!--<p>防尘、防水、隔音效果突出</p>-->
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+        <div class="cate-item-sub cate-item-sub-1">
+            <div class="cate-item-sub-title">
+                请选择以下产品分类进入查看品牌或产品 <span class="icon-bg icon-down"></span>
+            </div>
+            <ul class="cate-pro-ul">
+                {{#each list}}
+                <li id="{{cat_id}}" class="app-btn">{{cat_name}}</li>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+</div>

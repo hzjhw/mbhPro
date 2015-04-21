@@ -1,0 +1,26 @@
+<div id="my" class="login_dealers">
+    <div class="top app-section app-topbar">
+        <div class="wrap">
+            <div class="app-back btn-back app-btn">返回</div>
+            <div class="title" data-back>厂家给我私信</div>
+        </div>
+    </div>
+    <div class="messages app-content">
+        <ul class="ly">
+            {{#each msgList}}
+            <li>
+                <div class="name"><span>{{plus @index 1}}</span>私信厂家：{{cust_name}}</div>
+                <div class="detailed"><b>厂家私信内容：</b>{{content}}</div>
+                <div class="tel"><span>联系电话:{{contact_cellphone}}</span><span class="r">联系人:{{contact_name}}</span></div>
+                <div class="contact" fact-id="{{fact_id}}"><div id="tocoperate">我要和厂家合作</div><div id="lvmsg" class="r">我要给厂家留言</div></div>
+                <div class="time">留言时间：{{in_date}}</div>
+            </li>
+            {{else}}
+            暂无厂家私信
+            {{/each}}
+        </ul>
+        <div class="clear"></div>
+        <div class="footer_mes">
+        </div>
+    </div>
+</div>

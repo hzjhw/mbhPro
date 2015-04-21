@@ -1,0 +1,17 @@
+.DS_Store
+.idea/
+*.iml
+*.swp
+/.tmp/
+/config.js
+/uploads
+/logs
+/dist
+test
+.settings
+npm-debug.log
+node_modules/
+bower_components/
+app/base/*.js
+app/config.local.js
+

@@ -1,0 +1,91 @@
+<div id="app-index-logo" class="app-logo-container">
+    <div class="app-logo icon-bg grid-6">
+    </div>
+    <div class="grid-4 app-top-login">
+        <div class="app-btn btn-register">注册</div>
+        <div class="app-btn btn-login right">登录</div>
+    </div>
+</div>
+<div class="app-topbar" style="height: 65px;">
+    <div class="app-button btn-menu icon-bg grid-2" data-target="category">展 馆</div>
+    <div class="app-search grid-6"><input class="input-search icon-bg" type="button"/>
+
+        <div class="search-placeholder app-button" data-target="search">搜索品牌&nbsp;/&nbsp;搜索产品</div>
+    </div>
+    <div class="app-button grid-2  btn-my icon-bg"><span class="span-my">个人中心</span>
+
+        <div class="container-my" style="display:none;">
+            <ul class="ul-my">
+                <li data-target="favorite_info">
+                    <div class="icon-bg icon-member app-button"></div>
+                    <p>我的资料</p>
+                </li>
+                <li data-target="favorite_love">
+                    <div class="icon-bg icon-member app-button"></div>
+                    <p>我的需求</p>
+                </li>
+                <li data-target="favorite_chgpwd">
+                    <div class="icon-bg icon-member app-button"></div>
+                    <p>密码修改</p>
+                </li>
+                <li data-target="favorite_product">
+                    <div class="icon-bg icon-door app-button"></div>
+                    <p>收藏的产品</p></li>
+                <li data-target="favorite_vouch">
+                    <div class="icon-bg icon-diamond app-button"></div>
+                    <p>申领代金券</p></li>
+                <!--<li data-target="favorite_brand">
+                    <div class="icon-bg icon-diamond app-button"></div>
+                    <p>收藏的品牌</p></li>-->
+                <li data-target="favorite_cooprate">
+                    <div class="icon-bg icon-hand app-button"></div>
+                    <p>我的合作意向</p></li>
+                <li data-target="favorite_money">
+                    <div class="icon-bg icon-money app-button"></div>
+                    <p>我的代金券</p></li>
+                <li data-target="favorite_message">
+                    <div class="icon-bg icon-message app-button"></div>
+                    <p>我的留言</p></li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+<div class="app-content merchant-cont-container">
+    <div class="merchant-content">
+        <div id="merchant-unique-left" class="merchant-unique-left">
+            <ul id="mer-unique-ul" class="mer-unique-ul">
+                <li data-id="3376238744" class="current">防盗安全门</li>
+                <li data-id="8576581252" class="">非标门</li>
+                <li data-id="3434134747" class="">合金铜门</li>
+                <li data-id="6612165247" class="">木门</li>
+                <li data-id="6821853644" class="">生态木门</li>
+                <li data-id="2726731646" class="">钢木门</li>
+                <li data-id="5522346257" class="">实木复合门</li>
+                <li data-id="3183431452" class="">实木门</li>
+                <li data-id="8361368721" class="">别墅大门</li>
+                <li data-id="8586342634" class="">铸铝门</li>
+                <li data-id="1176156824" class="">楼寓门</li>
+                <li data-id="4574454578" class="">拼接门</li>
+                <li data-id="4714115751" class="">地板</li>
+            </ul>
+        </div>
+        <div class="merchant-unique-right">
+            <div id="merchant-unique-right-inner" class="merchant-unique-right-inner">
+                <ul class="mer-unique-right-ul">
+                    <li data-id="{{product_id}}" cust-id="{{cust_id}}" style="padding-bottom: 30px;">
+                        <div class="mer-unique-img">
+                            <img src="{{CONST 'PIC_URL'}}/{{picUrl img_path 3}}" alt="" height="300"/>
+                        </div>
+                        <div class="mer-unique-title app-btn">
+                            {{title}}
+                        </div>
+                        <div class="mer-unique-info">
+                            产品特点：{{{recom_desc}}}
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

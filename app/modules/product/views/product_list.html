@@ -1,0 +1,116 @@
+<div id="factory">
+    <div class="app-topbar" style="height: 86px;">
+        <div class="header">
+            <a class="fl app-back go-back app-btn" href="javascript:void(0)">返回</a>
+            <img class="fl logo" src="images/logo.jpg" alt="330门业招商节">
+
+            <div class="fr hall">展馆</div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class="app-content app-lazyload">
+        <div id="include_header"></div>
+        <div class="search-list x">
+            <div class="search-list-title"><span class="titlename app-btn">筛选</span><span class="name">全部</span>
+
+                <div class="fr icons icons-list"></div>
+            </div>
+            <div class="xiala" style="display:none;">
+                <div class="xiala-content">
+                    <div class="ygtvtable-div1">
+                        <div class="fenlei01" data-id="all">全部</div>
+                    </div>
+                    {{#each catList}}
+                    <div class="ygtvtable-div1">
+                        <div class="fenlei01" data-id="{{cat_name}}">{{cat_name}}</div>
+                        <ul>
+                            {{#each children}}
+                            <li data-id="{{cat_id}}">{{cat_name}}</li>
+                            {{/each}}
+                            <div class="clear"></div>
+                        </ul>
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
+            <div class="xiala-price" style="display:none;">
+                <div class="xiala-content">
+                    <div class="ygtvtable-div1">
+                        <div class="fenlei01" data-id="all">全部</div>
+                    </div>
+                    {{#each priceList}}
+                    <div class="ygtvtable-div1">
+                        <div class="fenlei01" data-id="{{para_value}}">{{para_value}}</div>
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
+            <div class="xiala-cmp" style="display:none;">
+                <div class="xiala-content">
+                    <div class="ygtvtable-div1">
+                        <div class="fenlei01" data-id="all">全部</div>
+                    </div>
+                    {{#each allCats}}
+                    <div class="ygtvtable-div1"><div class="fenlei01" data-id="{{cat_id}}">{{cat_name}}</div>
+                        <ul>
+                            {{#each children}}
+                            <li data-id="{{cat_id}}">{{cat_name}}</li>
+                            {{/each}}
+                            <div class="clear"></div>
+                        </ul>
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
+            <style>
+                #factory .app-content .search-list-cont.largest-view .glitzItem{border-bottom: 1px dashed #bbbaba;margin-bottom: 20px; padding-bottom: 20px;}
+            </style>
+            <div class="search-list-cont list-view ">
+                {{#each list}}
+                <div class="glitzItem" data-id="{{product_id}}" cust-id="{{cust_id}}">
+                    <a class="glitzPic btn-pro-detail app-btn" href="javascript:void(0)"><img class="lazy" data-original="{{CONST 'PIC_URL'}}{{img_path}}" src="images/space.png"
+                             width="100%"></a>
+
+                    <div class="txt">
+                        <p class="title btn-pro-detail app-btn">{{title}}</p>
+
+                        <p class="feature">产品特点：{{recom_desc}}</p>
+
+                        <p class="feature">品牌名称：{{brand_name}}</p>
+
+                        <p class="feature">所属分类：{{cat_name}}</p>
+
+                        <p class="price"><span class="fl">{{price}}</span><a class="fl collect"
+                                                                             href="javascript:void(0)"
+                                                                             proid="{{product_id}}">收藏</a></p>
+
+                        <div class="clear"></div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                {{/each}}
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div class="message">
+        </div>
+
+
+        <!--页脚-->
+        <div class="app-section merchant-footer">
+            <p>①2015 浙B2-20050229-3 用户反馈中心</p>
+            <img src="images/bottom-logo.png" alt="手机 3月30日"/>
+
+            <div><strong>足不出户逛展会</strong></div>
+        </div>
+    </div>
+    <div class="app-bottombar brand-bottom-hide">
+        <div class="bottombar-cover"></div>
+        <div class="bottombar">
+            <ul class="bottombar-ul">
+            </ul>
+        </div>
+    </div>
+
+</div>
+

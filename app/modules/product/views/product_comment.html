@@ -1,0 +1,44 @@
+<div class="app-topbar" style="height: 90px;">
+    <div class="category-title">
+        <div class="cate-item category-zg app-btn current brand-base">
+            基本信息
+        </div>
+       <!-- <div class="cate-item category-pro app-btn">
+            商品详情
+        </div>-->
+        <div class="cate-item category-pro app-btn brand-detail">
+            品牌详情
+        </div>
+        <div class="app-button app-back  category-close icon-bg app-btn"></div>
+    </div>
+</div>
+
+<div id="factory" class="app-content">
+    <div class="app-section bs relative">
+        <div class="cate-item-sub cate-item-sub-0 cate-cur">
+            <div class="img_product">
+                <div class="img"><img src="{{CONST 'PIC_URL'}}{{picUrl proDetail.img_path 6}}"></div>
+                <div class="txt">{{proDetail.title}}</div>
+            </div>
+            <div  class="comment">
+                <div class="loading-text">拼命加载中...<a href="javascript:App.load('include_comment');">刷新页面</a></div>
+            </div>
+        </div>
+       <!-- <div class="cate-item-sub cate-item-sub-1">
+            {{{proDetail.content}}}
+        </div>-->
+        <div class="cate-item-sub cate-item-sub-2">
+            <div class="product-brand-detail">
+
+            </div>
+            <div class="product-brand-message">
+                <div class="message">
+                    <div class="loading-text">拼命加载中...<a href="javascript:App.load('product_detail');">刷新页面</a></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+</div>

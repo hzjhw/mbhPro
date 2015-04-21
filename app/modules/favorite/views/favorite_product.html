@@ -1,0 +1,31 @@
+<div id="my" class="login_dealers">
+    <div class="top app-section app-topbar">
+        <div class="wrap">
+            <div class="app-back btn-back app-btn">返回</div>
+            <div class="title" data-back>我的产品收藏</div>
+        </div>
+    </div>
+    <div class="product app-content">
+        <ul>
+            {{#each colProList}}
+            <li pro-id="{{self_id}}" fact-id="{{cat_id}}">
+                <div class="imgs">
+                    <div class="ver_pic">
+                        <a class="app-btn"  href="javascript:void(0)"> <img src="{{CONST 'PIC_URL'}}{{img_url}}"></a>
+                    </div>
+                </div>
+                <div class="detailed" data-id="{{coll_id}}">
+                    <p class="name_product">名称：{{title}}</p>
+                    <p class="h">品牌：{{brand_name}}</p>
+                    <p class="xh">型号：{{proDetail.model}}</p>
+                    <p class="delete">删除收藏</p>
+                </div>
+            </li>
+            {{else}}
+            暂无收藏
+            {{/each}}
+        </ul>
+        <div class="clear"></div>
+        <div class="footer_mes"></div>
+    </div>
+</div>

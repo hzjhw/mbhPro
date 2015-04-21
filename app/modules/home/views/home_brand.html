@@ -1,0 +1,32 @@
+<div class="app-section">
+    <div class="merchant-title-bg"></div>
+    <div class="merchant-title">
+        <div class="grid-3 ">
+            <div class="merchant-t-tl">品质护航</div>
+        </div>
+        <div class="grid-4 relative merchant-t-m">
+            {{title}}
+        </div>
+        <div class="grid-3 ">
+            <div class="merchant-t-tr">代理无忧</div>
+        </div>
+    </div>
+    <div class="merchant-content">
+        <ul id="brandList" class="merchant-content-ul">
+            {{#each list}}
+            <li data-id="{{cust_id}}" class="app-button app-btn">
+                <div class="merchant-cont-img ">
+                    <img class="lazy" data-original="{{CONST 'PIC_URL'}}{{brand_path}}" src="images/space.png" alt="" width="284" height="347"/>
+                </div>
+                <div class="scyx"><div class="collection">收藏</div><div class="intention">意向合作</div></div>
+                <div class="merchant-cont-title">
+                    {{cust_name}}
+                </div>
+                <div class="merchant-cont-brand">
+                    所属品牌：{{brand_name}}
+                </div>
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+</div>

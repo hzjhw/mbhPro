@@ -1,0 +1,52 @@
+<div class="app-topbar">
+    <div class="category-title app-section">
+        <div class="cate-item category-zg current">
+            空白区域
+        </div>
+        <div class="cate-item category-pro">
+            产品价格
+        </div>
+        <div class="cate-item category-pro">
+            产品分类
+        </div>
+        <div class="app-button app-back app-btn category-close icon-bg"></div>
+    </div>
+</div>
+<div class="app-content">
+    <div class="app-section relative">
+        <div class="cate-item-sub cate-item-sub-0 cate-cur">
+            <div class="cate-item-sub-title">
+                <input class="input-search" type="text" placeholder="请输入要搜索的空白区域地址"/>
+                <div class="btn-search app-button"></div>
+            </div>
+            <div class="search-tip">
+                <p><span class="red">提示：</span>在下面输入框中先输入您要搜索的空 白区域地址，如：输入<span class="red">永康</span>
+                    ，那么就会列出永康为空白区域的品牌，输入时， 不要输入省、市、县、区等字， 如：<span class="red">
+                            不要输入永康市
+                    </span>
+
+                </p>
+            </div>
+        </div>
+        <div class="cate-item-sub cate-item-sub-1">
+            <div class="cate-item-sub-title">
+                请选择以下产品价格分类进入查看产品 <span class="icon-bg icon-down"></span>
+            </div>
+            <ul class="cate-pro-ul search-price-ul">
+                {{#each list}}
+                <li data-id="{{para_key}}" class="app-btn">{{para_value}}</li>
+                {{/each}}
+            </ul>
+        </div>
+        <div class="cate-item-sub cate-item-sub-2">
+            <div class="cate-item-sub-title">
+                请选择以下产品分类进入查看产品 <span class="icon-bg icon-down"></span>
+            </div>
+            <ul class="cate-pro-ul search-pro-ul">
+                {{#each list}}
+                <li data-id="{{cat_id}}" class="app-btn">{{cat_name}}</li>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,8 @@
+<div class="prompt h">我对此品牌感兴趣，我想加盟和了解更多</div>
+<div class="prompt">企业温馨提示：您的留言我们会第一时间反馈！</div>
+<div class="form"><i><span>*</span>姓名：</i><input type="text" id="custname"  placeholder="如 王先生"></div>
+<div class="form"><i><span>*</span>手机：</i>
+    <input type="text" id="cellphone" {{#xif "this.hadlogin == '1'"}} readonly="readonly" {{/xif}}  placeholder="如 13575695737" />
+</div>
+<div class="form"><i>留言：</i><input type="text" id="levMsg" placeholder="我对此项目很感兴趣，请联系我们。"></div>
+<div id="msgSub" class="button app-button">提交留言</div>

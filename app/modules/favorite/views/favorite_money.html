@@ -1,0 +1,54 @@
+<div id="my" class="login_dealers">
+    <div class="top app-section app-topbar">
+        <div class="wrap">
+            <div class="app-back btn-back app-btn">返回</div>
+            <div class="title" data-back>我的代金卷</div>
+        </div>
+    </div>
+    <div class="messages app-content">
+        <ul class="money">
+            {{#each vchList}}
+            <li>
+                <div class="name"><span>{{plus @index 1}}</span>代金券编号：{{voucher_id}}</div>
+                <div class="state">
+                    <div class="zt">使用状态：
+                        {{#xif "this.use_state == '00'"}}
+                         <span>未使用</span>
+                        {{else}}
+                         <span class="l">已使用</span>
+                        {{/xif}}
+                    </div>
+                   <!-- {{#xif "this.use_state != '00'"}}
+                        <div class="ck">查看详情</div>
+                    {{/xif}}-->
+                </div>
+                {{#xif "this.use_state != '00'"}}
+                <div>使用对象：{{cust_name}}</div>
+                <div>使用日期：{{use_time}}</div>
+                <div>是否生效：{{{useStatus use_state}}} </div>
+                <div>生效日期：{{check_time}} </div>
+                {{/xif}}
+            </li>
+            {{else}}
+                暂无代金券
+            {{/each}}
+           <!-- <li>
+                <div class="name"><span>2</span>代金券编号：DF98khf2L98</div>
+                <div class="state"><div class="zt">使用状态：<span>未使用</span></div></div>
+                <div>购买日期：2015-3-1 11:11:23</div>
+            </li>
+            <li>
+                <div class="name"><span>3</span>代金券编号：DF98khf2L98</div>
+                <div class="state"><div class="zt">使用状态：<span class="l">已使用</span></div><div class="ck">查看详情</div></div>
+                <div> 使用对象：浙江亿智工贸有限公司</div>
+                <div>使用日期：2015-3-30 12:11:34</div>
+                <div>是否生效：<span class="l">已审核通过</span></div>
+                <div>购买日期：2015-3-1 11:11:23</div>
+            </li>-->
+        </ul>
+        <div class="clear"></div>
+        <div class="footer_mes">
+        </div>
+    </div>
+
+</div>

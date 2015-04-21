@@ -1,0 +1,65 @@
+<div class="app-topbar" style="height: 90px;">
+    <div class="category-title">
+        <div class="cate-item category-zg app-btn current brand-base">
+            基本信息
+        </div>
+        <div class="cate-item category-pro app-btn">
+            商品详情
+        </div>
+        <div class="cate-item category-pro app-btn brand-detail">
+            品牌详情
+        </div>
+        <div class="app-button app-back  category-close icon-bg app-btn"></div>
+    </div>
+</div>
+
+<div id="factory" class="app-content">
+    <div class="app-section bs relative">
+        <div class="cate-item-sub cate-item-sub-0 cate-cur">
+            <div class="img_product">
+                <div class="img"><img src="{{CONST 'PIC_URL'}}{{picUrl proDetail.img_path 6}}"></div>
+                <div class="txt">{{proDetail.title}}</div>
+                <div class="collection">
+                    <div class="td">产品特点：{{proDetail.recom_desc}}</div>
+                    <div class="sc"><p>收藏</p></div>
+                </div>
+            </div>
+            <div class="data_product">
+                <ul>
+                    <li><p>产品型号：{{proDetail.model}}</p>
+
+                        <p class="mid">产品规格：{{proDetail.standard}}</p>
+
+                        <p>价格区间：{{proDetail.price}}</p>
+                    </li>
+                    <li class="r"><p>品牌名称：{{proDetail.brand_name}}</p>
+
+                        <p class="mid">产地：{{proDetail.area_attr}}</p>
+
+                        <p>产品类别：{{proDetail.cat_name}}</p>
+                    </li>
+                </ul>
+               <!-- <div class="cn">服务承诺： 按时发货、T4 售后无忧、T3 极速退款 、七天无理由退换阿斯蒂芬阿斯顿发斯蒂芬阿斯蒂芬阿斯蒂芬阿斯蒂芬发送到发斯蒂芬</div>-->
+            </div>
+            <div  class="product-other">
+                <div class="loading-text">拼命加载中...<a href="javascript:App.load('product_other','.product-other',{{proDetail.cust_id}},{{proDetail.product_id}});">刷新页面</a></div>
+            </div>
+        </div>
+        <div class="cate-item-sub cate-item-sub-1">
+            {{{proDetail.content}}}
+        </div>
+        <div class="cate-item-sub cate-item-sub-2">
+            <div class="product-brand-detail">
+
+            </div>
+            <die class="product-brand-message">
+                <div class="message">
+                    <div class="loading-text">拼命加载中...<a href="javascript:App.load('product_detail');">刷新页面</a></div>
+                </div>
+            </die>
+        </div>
+
+    </div>
+
+
+</div>

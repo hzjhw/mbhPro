@@ -1,0 +1,60 @@
+<div class="prolist">
+    <a class="hong a001 app-btn" data-id="4361326338 " data-title="品牌展示馆" data-banner="banner" href="javascript:void(0)">品牌展示馆</a>
+    <a class="a002 app-btn" data-id="1417272248" data-title="防盗门馆" data-banner="fangdaomen_banner" href="javascript:void(0)">防盗门馆</a>
+    <a class="a003 app-btn" data-id="8636812455" data-title="铜门/不锈钢门馆" data-banner="buxiugangmen_banner" href="javascript:void(0)">铜门/不锈钢门馆</a>
+    <a class="hong a001 app-btn" data-id="" data-title="特色门馆" data-banner="banner" href="javascript:void(0)">特色门馆</a>
+    <a class="a002 app-btn" data-id="3818678422" data-title="非标门馆" href="javascript:void(0)">非标门馆</a>
+    <a class="a004 app-btn" data-id="4531876237" data-title="木门馆" data-banner="mumen_banner" href="javascript:void(0)">木门馆</a>
+    <a class="a004 app-btn" data-id="4412667554" data-title="钢木门馆" data-banner="gangmumen_banner" href="javascript:void(0)">钢木门馆</a>
+    <a class="hong a001 app-btn" data-id="3486245445" data-title="铝合金门馆" data-banner="lvhejinmen_banner" href="javascript:void(0)">铝合金门馆</a>
+    <a class="a002 app-btn" data-id="4432837154" data-title="防火门馆" data-banner="fanghuomen_banner" href="javascript:void(0)">防火门馆</a>
+    <a class="hong a003 app-btn" data-id="5276256741" data-title="生态木门/强化门" data-banner="shengtaimen_banner"
+       href="javascript:void(0)">生态木门/强化门馆</a>
+
+    <div class="clear"></div>
+</div>
+
+{{#compare hide '!==' true}}
+<div class="factory_logo">{{#if logo_img}}<img src="{{CONST 'PIC_URL'}}/{{$ logo_img ''}}" alt="330门业招商节">{{/if}}</div>
+<div class="factory_banner">{{#if header_img}}<img src="{{CONST 'PIC_URL'}}/{{$ header_img ''}}" alt="330门业招商节">{{/if}}</div>
+<div></div>
+<div class="nav">
+    <ul>
+        <li data-id="{{$ id ''}}" data-url="brand_detail" data-target-args='{"id":"{{id}}"}' class="app-btn">
+            <i class="icon {{#xif 'this.icon===1'}}current{{/xif}}"></i>
+
+            <div>首页</div>
+        </li>
+        <li data-id="{{$ id ''}}" class="app-btn" data-url="" data-target-args='{"id":"{{id}}"}'><i
+                class="icon data {{#xif 'this.icon===2'}}current{{/xif}}"></i>
+
+            <div>意向合作</div>
+        </li>
+        <!--<li data-id="{{$ id ''}}" class="app-btn" data-url="brand_info" data-target-args='{"id":"{{id}}"}'><i
+                class="icon data {{#xif 'this.icon===2'}}current{{/xif}}"></i>
+
+            <div>厂家信息</div>
+        </li>-->
+        <li data-id="{{$ id ''}}" class="app-btn" data-url="product_list" data-target-args='{"id":"{{id}}"}'><i
+                class="icon product {{#xif 'this.icon===3'}}current{{/xif}}"></i>
+
+            <div>产品展示</div>
+        </li>
+        <li data-id="{{$ id ''}}" class="app-btn" data-url="brand_tec" data-target-args='{"id":"{{id}}"}'><i
+                class="icon power {{#xif 'this.icon===4'}}current{{/xif}}"></i>
+
+            <div>厂家实力</div>
+        </li>
+        <!--<li data-id="{{$ id ''}}" class="app-btn" data-url="brand_blank" data-target-args='{"id":"{{id}}"}'><i
+                class="icon area {{#xif 'this.icon===5'}}current{{/xif}}"></i>
+
+            <div>空白区域</div>
+        </li>-->
+        <li data-id="{{$ id ''}}" class="app-btn" data-url="brand_info" data-target-args='{"id":"{{id}}"}'><i
+                class="icon area {{#xif 'this.icon===5'}}current{{/xif}}"></i>
+
+            <div>招商政策</div>
+        </li>
+    </ul>
+</div>
+{{/compare}}

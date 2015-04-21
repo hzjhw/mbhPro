@@ -1,0 +1,40 @@
+<div id="factory">
+    <div class="app-logo-container  app-topbar" style="height: 86px;">
+        <div class="header">
+            <a class="fl app-back go-back app-btn" href="javascript:void(0)">主会场</a>
+            <img class="fl logo" src="images/logo.jpg" alt="330门业招商节">
+            <div class="fr hall">展馆</div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class="app-content">
+        <div id="include_header"></div>
+        <div class="content" style="overflow: hidden;">
+            {{#if mobile_img1}}<img src="{{CONST 'PIC_URL'}}/{{mobile_img1}}" style="float:left;" width="100%" alt=""/>{{/if}}
+            {{#if mobile_img2}}<img src="{{CONST 'PIC_URL'}}/{{mobile_img2}}" style="float:left;" width="100%" alt=""/>{{/if}}
+            {{#if mobile_img3}}<img src="{{CONST 'PIC_URL'}}/{{mobile_img3}}" style="float:left;" width="100%" alt=""/>{{/if}}
+            {{#if mobile_img4}}<img src="{{CONST 'PIC_URL'}}/{{mobile_img4}}" style="float:left;" width="100%" alt=""/>{{/if}}
+            {{#if mobile_img5}}<img src="{{CONST 'PIC_URL'}}/{{mobile_img5}}" style="float:left;" width="100%" alt=""/>{{/if}}
+        </div>
+        <div>
+            <img id="imgtovch" src="images/yxhz1.gif">
+        </div>
+        <div class="message">
+            <div class="loading-text">拼命加载中...<a href="javascript:App.load('brand_detail');">刷新页面</a></div>
+        </div>
+        <img id="first" style="width:100%" src="http://m.331.11door.com/images/index2.jpg" />
+        <!--页脚-->
+        <div class="app-section merchant-footer">
+            <p>①2015 浙B2-20050229-3 用户反馈中心</p>
+            <img src="images/bottom-logo.png" alt="手机 3月30日">
+            <div><strong>足不出户逛展会</strong></div>
+        </div>
+    </div>
+    <div class="app-bottombar">
+        <div class="bottombar-cover"></div>
+        <div class="bottombar">
+            <ul class="bottombar-ul">
+            </ul>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,35 @@
+<div id="my" class=" login_dealers">
+    <div class="top app-section app-topbar">
+        <div class="wrap">
+            <div class="app-back btn-back app-btn">返回</div>
+            <div class="title" data-back>我的意向合作</div>
+        </div>
+    </div>
+    <div class="messages app-content">
+        <ul class="yxhz">
+            {{#each vchList}}
+            <li>
+                <div class="name"><span>{{plus @index 1}}</span>对应品牌：{{cust_name}}</div>
+                <div class="detailed">我的留言：{{content}}</div>
+                <div class="state_djq">
+                    <div class="state">代金券：
+                        {{#xif "this.voucher_id == '11111111'"}}
+                            未使用
+                        {{else}}
+                            {{this.voucher_id}}
+                        {{/xif}}
+                    </div>
+                    <div class="prompt">（使用代金券可100抵500）</div>
+                </div>
+                <div class="cooperation">合作是否生效：{{{resultStatus use_state}}}</div>
+                <div class="remind">提示：厂商合作成功后，330主办方会在活动成功后送您一件惊喜小礼物，记得提醒厂家在网上审核通过！</div>
+                <div class="time">提交时间：{{bind_time}}</div>
+            </li>
+            {{else}}
+                暂无合作
+            {{/each}}
+        </ul>
+        <div class="clear"></div>
+        <div class="footer_mes"></div>
+    </div>
+</div>

@@ -1,0 +1,23 @@
+.login_dealers a ,.registered a{text-decoration:none;}
+.login_dealers .wrap , .registered .wrap{width:640px;margin:0 auto;overflow:hidden;text-align: center;}
+.login_dealers {font-size:14px;font-family:"微软雅黑";}
+.login_dealers .top {height:58px;line-height:58px; background: url(img/top_bj.jpg);background-size:100% 100%;padding:20px 0;}
+.btn-back {display:block;width: 135px;height: 58px;background: url(img/return.jpg) no-repeat;background-size: 100%;line-height: 58px;font-size: 26px;text-align: center;color: #6A6A6A;margin: 0px 30px 0px 20px;float:left;}
+.login_dealers .top .title {float:left;font-size:26px;width:325px;font-weight:normal;color:#000;}
+.registered {text-align:center;}
+.registered input,#registered textarea {width:470px;height:70px;margin-top:25px;padding:0 15px 0 75px;background:#fff url(img/icon_login.png) no-repeat;-moz-border-radius:6px;-webkit-border-radius:6px;border-radius:6px;border: 1px solid #ccc;-moz-box-shadow: 0 2px 3px 0 rgba(0,0,0,.1) inset;-webkit-box-shadow: 0 2px 3px 0 rgba(0,0,0,.1) inset;box-shadow: 0 2px 3px 0 rgba(0,0,0,.1) inset;font-size:26px;color:#2D2D2D;background-size:60px;background-position:12px 6px;}
+.registered button {cursor:pointer;width:560px;height:90px;margin-top:40px;background:#d21359;-moz-border-radius:6px;-webkit-border-radius:6px;border-radius:6px;border:1px solid #d42263;-moz-box-shadow:0 15px 30px 0 rgba(255,255,255,.25) inset, 0 2px 7px 0 rgba(0,0,0,.2);-webkit-box-shadow:0 15px 30px 0 rgba(255,255,255,.25) inset, 0 2px 7px 0 rgba(0,0,0,.2);box-shadow:0 15px 30px 0 rgba(255,255,255,.25) inset, 0 2px 7px 0 rgba(0,0,0,.2);font-size:34px;color:#fff;text-shadow:0 1px 2px rgba(0, 0, 0, .1); line-height:44px;}
+.registered input.name {background-position: 12px -55px;}
+.registered input.password {background-position:12px -115px;}
+.registered input.address {background-position:12px -176px;}
+.registered input.size {background-position:12px -237px;}
+.registered input.time {background-position:12px -297px;}
+.login_dealers .note {text-align:center;font-size:26px;color:#484848;height:auto;padding-top:30px;}
+.login_dealers .note p {padding:20px 0 10px;}
+.login_dealers .note a {font-size:26px;color:#004477;margin:0 10px;}
+.registered .prompt {color:#6c6c6c;font-size:26px;margin:15px auto -10px;text-align:left;width:280px;}
+.registered textarea {height:100px;background-image:none;padding:0 15px;width:250px;}
+.registered input.x {width:340px;float:left;margin-left:40px;}
+.registered .dw {width:135px;float:left;height:72px;line-height:72px;margin-top:25px;font-size:32px;color:#6D6C6C;}
+.registered input.yzm {width:50%;float:left;margin-left:40px;}
+.hqyzm {height:70px;line-height:70px;margin-top:25px;font-size:18px;color:#fff;float:left;background:#d21359;width:145px;}
