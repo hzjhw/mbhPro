@@ -3,7 +3,8 @@
  * @class main
  * @author yongjin<zjut_wyj@163.com> 2015/3/2
  */
-
+App.VCH_CUST_PHONE="vch_cust_phone";
+App.VCH_CHOICE_TYPE="vch_choice_type";
 App.CELL_PHONE = "cell_phone";
 App.CNT_NAME = "cntName";
 App.isLogin = function () {
@@ -279,6 +280,10 @@ seajs.use(['App'], function (App) {
       }
       if ($(this).attr('data-id') === 'comment_index') {
         App.load('comment_index');
+        return;
+      }
+      if ($(this).attr('data-id') === 'vch_index') {
+        App.load('vch_index');
         return;
       }
       App.load('brand_list', {
@@ -775,6 +780,40 @@ seajs.use(['App'], function (App) {
     localStorage['product_comment_args_proid'] = ctx.args.proid;
     seajs.use(['ProductComment'], function (ProductComment) {
       App.ProductComment = new ProductComment(page, ctx.args.id, ctx.args.proid, ctx);
+    });
+  });
+  /*抵金券领取*/
+  App.controller('vch_index',function(page){
+    debug('【Controller】pageLoad: vch_index');
+    App.initLoad(page, { transition: 'slide-left', page:'vch_index'}, this);
+    seajs.use(['Voucher'], function (Voucher) {
+      App.Voucher = new Voucher(page);
+    });
+  });
+  /*抵金券类型选择*/
+  App.controller('vch_choice',function(page){
+    debug('【Controller】pageLoad: vch_index');
+    App.initLoad(page, { transition: 'slide-left', page: 'vch_choice'}, this);
+    seajs.use(['VchChoice'], function (VchChoice) {
+      App.VchChoice = new VchChoice(page);
+    });
+  });
+  /*抵金券产品分类*/
+  App.controller('vch_brandtype',function(page){
+    debug('【Controller】pageLoad: vch_brandtype');
+    var vchtype = this.args.type;
+    App.initLoad(page, { transition: 'slide-left', page: 'vch_brandtype'}, this);
+    seajs.use(['VchBrandType'], function (VchBrandType) {
+      App.VchBrandType = new VchBrandType(page,vchtype);
+    });
+  });
+  /*抵金券厂家列表*/
+  App.controller('vch_faclist',function(page){
+    debug('【Controller】pageLoad: vch_faclist');
+    var catid = this.args.catid;
+    App.initLoad(page, { transition: 'slide-left', page: 'vch_faclist'}, this);
+    seajs.use(['VchFacList'], function (VchFacList) {
+      App.VchFacList = new VchFacList(page,catid);
     });
   });
   /*搜索*/

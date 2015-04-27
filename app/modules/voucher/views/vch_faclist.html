@@ -1,0 +1,16 @@
+   <div id="factory">
+    <div class="app-logo-container app-topbar" style="height: 86px;">
+        <div class="header">
+            <a class="fl app-back go-back app-btn" href="javascript:void(0)">返回</a>
+            <img class="fl logo" src="images/logo.jpg" alt="330门业招商节">
+            <div class="fr hall">品牌类型</div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class="app-content vchinfo">
+        企业列表
+        <ul>
+            {{#each facList}}<li data-id="{{cust_id}}">{{cust_name}}</li>{{/each}}
+        </ul>
+    </div>
+   </div>
