@@ -282,8 +282,12 @@ seajs.use(['App'], function (App) {
         App.load('comment_index');
         return;
       }
-      if ($(this).attr('data-id') === 'vch_index') {
+      /*if ($(this).attr('data-id') === 'vch_index') {
         App.load('vch_index');
+        return;
+      }*/
+      if ($(this).attr('data-id') === 'exhlist') {
+        App.load('exhlist');
         return;
       }
       App.load('brand_list', {
@@ -306,20 +310,7 @@ seajs.use(['App'], function (App) {
       App.Forgetpwd = new Forgetpwd(page,this);
     });
   });
-  /*意向合作*/
-  App.controller('brand_cooperate', function (page) {
-    debug('【Controller】pageLoad: brand_cooperate');
-    App.initLoad(page, { transition: 'slide-left', page: 'brand_cooperate'}, this);
-    var factid = this.args.factid;
-    if(!factid){
-      var cntVal = '无法找到该厂相关信息!';
-      App.showMsg('无厂家信息', cntVal);
-      return;
-    }
-    seajs.use(['BrandCooperate'], function (BrandCooperate) {
-      App.BrandCooperate = new BrandCooperate(page, factid);
-    });
-  });
+
   /*品牌列表*/
   App.controller('brand_list', function (page) {
     debug('【Controller】pageLoad: brand_list');
@@ -371,6 +362,12 @@ seajs.use(['App'], function (App) {
     }
   };
 
+  App.initVchInfo = function(ctx){
+    ctx.args.vchid = App.getUrlParam('vchid', window.location.href);
+    ctx.args.vchtype = App.getUrlParam('vchtype', window.location.href);
+    ctx.args.vchphone = App.getUrlParam('vchphone', window.location.href);
+  };
+
   /*品牌详细*/
   App.controller('brand_detail', function (page) {
     debug('【Controller】pageLoad: brand_detail');
@@ -384,6 +381,20 @@ seajs.use(['App'], function (App) {
     seajs.use(['BrandDetail'], function (BrandDetail) {
       App.BrandDetail = new BrandDetail(page, ctx.args.id, ctx);
     })
+  });
+  /*意向合作*/
+  App.controller('brand_cooperate', function (page) {
+    debug('【Controller】pageLoad: brand_cooperate');
+    var ctx = this;
+    App.initBrandId(ctx);
+    App.initVchInfo(ctx);
+    var factid = ctx.args.id;
+    var vchphone= ctx.args.vchphone;
+    var vchid= ctx.args.vchid;
+    App.initLoad(page, { transition: 'slide-left', page: 'brand_cooperate?factid='+factid+"&vchphone="+vchphone+"&vchid="+vchid}, this);
+    seajs.use(['BrandCooperate'], function (BrandCooperate) {
+      App.BrandCooperate = new BrandCooperate(page, factid,vchphone,vchid);
+    });
   });
   /*厂家信息*/
   App.controller('brand_info', function (page) {
@@ -780,6 +791,14 @@ seajs.use(['App'], function (App) {
     localStorage['product_comment_args_proid'] = ctx.args.proid;
     seajs.use(['ProductComment'], function (ProductComment) {
       App.ProductComment = new ProductComment(page, ctx.args.id, ctx.args.proid, ctx);
+    });
+  });
+  /*展会*/
+  App.controller('exhlist',function(page){
+    debug('【Controller】pageLoad: exhlist');
+    App.initLoad(page, { transition: 'slide-left', page:'exhlist'}, this);
+    seajs.use(['ExhList'], function (ExhList) {
+      App.ExhList = new ExhList(page);
     });
   });
   /*抵金券领取*/

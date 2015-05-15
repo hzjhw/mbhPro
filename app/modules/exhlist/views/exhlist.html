@@ -1,0 +1,26 @@
+<div class="app-section">
+    <div class="category-title">
+        <div class="cate-item category-zg current app-btn">
+            展馆分类
+        </div>
+        <div class="app-button app-back category-close icon-bg app-btn"></div>
+    </div>
+</div>
+<div class="app-content">
+    <div class="app-section relative">
+            <div class="cate-item-sub-title">
+                请选择 <span class="icon-bg icon-down"></span>
+            </div>
+            {{#each exhlist}}
+            <div class="ygtvtable-div1">
+                <div class="fenlei01" >{{factname}}</div>
+                <ul>
+                    {{#each children}}
+                    <li data-id="{{exh_id}}" >{{factname}}</li>
+                    {{/each}}
+                    <div class="clear"></div>
+                </ul>
+            </div>
+            {{/each}}
+    </div>
+</div>

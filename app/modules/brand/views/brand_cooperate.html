@@ -6,28 +6,22 @@
         </div>
     </div>
     <div class="wrap registered">
-        {{#if policy.site_desc}}<div id="keywd">{{policy.site_desc}}</div>{{/if}}
-        <input type="text" id="phoneNum" readonly="readonly" class="mobile" placeholder="手机号码/330用户名" value="{{custInfo.contact_cellphone}}">
-        <input type="text" id="name"  class="name" placeholder="真实姓名" value="{{custInfo.contact_name}}">
-        <input type="text" id="address"  class="address" placeholder="经销地址" value="{{custInfo.address}}">
-        <input type="text" id="isoem"  class="size x" placeholder="店面大小" value="{{custInfo.isoem}}">
+
+        <input type="text" id="phoneNum" class="mobile" placeholder="手机号码/330用户名" value="{{#if vchphone}}{{vchphone}}{{/if}}">
+        <input type="text" id="name"  class="name" placeholder="真实姓名" >
+        <input type="text" id="address"  class="address" placeholder="经销地址" >
+        <input type="text" id="isoem"  class="size x" placeholder="店面大小" >
         <span class="dw">平米</span>
-        <input type="text" id="year_sum"  class="time x" placeholder="从业年数" value="{{custInfo.year_sum}}">
+        <input type="text" id="year_sum"  class="time x" placeholder="从业年数">
         <span class="dw">年</span>
-        <input type="hidden" id="cust_id" value="{{custInfo.cust_id}}" />
         <style type="text/css">
             #djq {float:left;margin-left:40px;}
             #vouchers {width:380px;height:70px;font-size: 24px;margin-top: 25px;float: left;}
             #djq .dw {width:190px;}
             #djq textarea {float: left;width:530px;height:200px;border-radius:6px;margin-top:25px; font-size: 26px;}
-
         </style>
         <div id="djq">
-         <select id="vouchers" class="valid">
-            <option value="11111111" selected="selected">无</option>
-             {{#each vouchers}}<option value="{{vuse_id}}">{{voucher_id}}</option>{{/each}}
-         </select>
-            <span class="dw">代金券ID</span>
+            <input type="text" id="vouchers" readonly="readonly" value="{{#if vchid}}{{vchid}}{{else}}无{{/if}}" />
             <textarea id="vouchMsg" placeholder="留言内容"></textarea>
         </div>
         <button id="confirm" type="submit">确认合作</button>

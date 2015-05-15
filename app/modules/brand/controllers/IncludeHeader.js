@@ -26,35 +26,8 @@ define('IncludeHeader', ['App', 'template/include_header', 'HandlebarsHelper'], 
       $(page).find('.nav ul li').off('click').on('click', function () {
         if($(this).attr('data-url') === '')
         {
-          if(!App.isLogin())
-          {
-            var cntVal = '登录看最牛招商政策';
-            App.showConfirm('未登录', cntVal, null, function () {
-              //App.setBackPage('brand_detail');
-              App.load('login_dealers');
-            });
-            return;
-          }
-          else
-          {
-            var factid = $(this).attr('data-id');
-            //alert(factid);
-            App.query('/cmp/hasCoped/'+factid,{
-              success:function(data){
-                if(data.msg === 'hasCoped')
-                {
-                  var cntVal = '您与该厂家已有合作!现在查看合作进展情况吗？';
-                  App.showConfirm("已有合作",cntVal,null,function(){
-                    App.load("favorite_cooprate");
-                  })
-                }
-                else
-                {
-                  App.load('brand_cooperate',{factid:factid});
-                }
-              }
-            })
-          }
+          var factid = $(this).attr('data-id');
+          App.load('brand_cooperate',{factid:factid});
         }
         else
         {

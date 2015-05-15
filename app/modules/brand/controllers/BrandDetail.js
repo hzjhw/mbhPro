@@ -48,15 +48,7 @@ define('BrandDetail', ['App', 'template/brand_detail', 'HandlebarsHelper'], func
             });
           });*/
           $(page).find("#imgtovch").click(function(){
-            if(App.isLogin())
               App.load('brand_cooperate',{factid:id});
-            else{
-              var cntVal = '登录看最牛招商政策';
-              App.showConfirm('未登录', cntVal, null, function () {
-                App.setBackPage('brand_cooperate');
-                App.load('login_dealers');
-              });
-            }
           });
           $(page).find('#first').click(function () {
             var url =encodeURIComponent("http://331.11door.com/ent/lottery/detail.jsp");
